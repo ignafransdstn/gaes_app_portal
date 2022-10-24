@@ -53,30 +53,46 @@ class _MainViewState extends State<MainView> {
   }
 
   mainMenu() {
-    return BottomNavyBar(
-      selectedIndex: index,
-      showElevation: true,
-      items: [
-        BottomNavyBarItem(
-          icon: const Icon(Ionicons.grid_outline),
-          title: const FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Text('SERVICES'),
-          ),
-          activeColor: const Color.fromARGB(255, 53, 107, 223),
-          textAlign: TextAlign.justify,
+    return BottomNavigationBar(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Ionicons.grid_outline),
+          label: "SERVICES",
+          backgroundColor: Color.fromARGB(255, 41, 106, 247)
         ),
-        BottomNavyBarItem(
-          icon: const Icon(Icons.dashboard_rounded),
-          title: const FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Text("DASHBOARD"),
-          ),
-          activeColor: const Color.fromARGB(255, 53, 107, 223),
-          textAlign: TextAlign.justify,
+        BottomNavigationBarItem(
+          icon: Icon(Icons.dashboard_rounded),
+          label: "DASHBOARD",
+          backgroundColor: Color.fromARGB(255, 13, 42, 102)
         ),
       ],
-      onItemSelected: (index) => setState(() => this.index = index),
+      currentIndex: index,
+      onTap: (index) => setState(() => this.index = index),
     );
+    // return BottomNavyBar(
+    //   selectedIndex: index,
+    //   showElevation: true,
+    //   items: [
+    //     BottomNavyBarItem(
+    //       icon: const Icon(Ionicons.grid_outline),
+    //       title: const FittedBox(
+    //         fit: BoxFit.fitWidth,
+    //         child: Text('SERVICES'),
+    //       ),
+    //       activeColor: const Color.fromARGB(255, 53, 107, 223),
+    //       textAlign: TextAlign.justify,
+    //     ),
+    //     BottomNavyBarItem(
+    //       icon: const Icon(Icons.dashboard_rounded),
+    //       title: const FittedBox(
+    //         fit: BoxFit.fitWidth,
+    //         child: Text("DASHBOARD"),
+    //       ),
+    //       activeColor: const Color.fromARGB(255, 53, 107, 223),
+    //       textAlign: TextAlign.justify,
+    //     ),
+    //   ],
+    //   onItemSelected: (index) => setState(() => this.index = index),
+    // );
   }
 }
