@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:gaes_app_portal/controller/screen_routes.dart';
 import 'package:gaes_app_portal/view/dashboard_page.dart';
 import 'package:gaes_app_portal/view/services_page.dart';
@@ -29,6 +28,7 @@ class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MainViewState createState() => _MainViewState();
 }
 
