@@ -55,21 +55,6 @@ class _SplashViewState extends State<SplashView> {
           const SizedBox(
             height: 20,
           ),
-          // ElevatedButton(
-          //   onPressed: () {
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(
-          //         builder: (context) => const MainView(),
-          //       ),
-          //     );
-          //   },
-          //   style: ElevatedButton.styleFrom(
-          //     backgroundColor: Colors.blue[900],
-          //     textStyle: const TextStyle(fontWeight: FontWeight.bold),
-          //   ),
-          //   child: const Text("OPEN MENU"),
-          // ),
         ],
       ),
     );
